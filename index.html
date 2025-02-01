@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOLAAAA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #d63384;
+      font-weight: 700;
+      animation: bounce 1.5s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    #btnSi {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #btnSi:hover {
+      background-color: #388E3C;
+    }
+
+    #btnNo {
+      background-color: #f44336;
+      color: white;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>💫 "Solo hay una cosa que falta para que esto sea perfecto… que seas mi novia. Aceptas?"</h1>
+    <div class="button-container">
+      <button onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi">Sí</button>
+      <button id="btnNo" onmouseover="mueveElBoton()">No</button>
+    </div>
+    <img src="img/2.jpeg" alt="Imagen romántica">
+  </div>
+
+  <script>
+    function accionParaCuandoEllaDigaQueSi() {
+      alert("¡Ahora ya somos novios! ❤️🥰");
+      window.location.href = "opcionsi.html";
+    }
+
+    function mueveElBoton() {
+      const btnNo = document.getElementById("btnNo");
+      const maxX = window.innerWidth - btnNo.offsetWidth;
+      const maxY = window.innerHeight - btnNo.offsetHeight;
+      
+      let newX = Math.random() * maxX;
+      let newY = Math.random() * maxY;
+      
+      btnNo.style.position = "absolute";
+      btnNo.style.left = `${newX}px`;
+      btnNo.style.top = `${newY}px`;
+    }
+  </script>
+</body>
+</html>

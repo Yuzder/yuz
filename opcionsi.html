@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Gracias por aceptar ser mi novia!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      animation: backgroundAnimation 6s infinite alternate;
+    }
+    
+    @keyframes backgroundAnimation {
+      0% {
+        background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      }
+      100% {
+        background: linear-gradient(120deg, #fad0c4, #ffdde1);
+      }
+    }
+
+    #container {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #d63384;
+      font-weight: 700;
+      margin-bottom: 10px;
+      animation: bounce 1.5s infinite alternate;
+    }
+    
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      max-width: 500px;
+      margin: 10px auto;
+    }
+    
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>"¡Felicidades! Has tomado la mejor decisión de tu vida... o la peor, ya veremos 😜." </h1>
+    <p>🌹 "Gracias por darme esta oportunidad. Cuidaré nuestro amor y haré todo lo posible para verte sonreír cada día."</p>
+    <img src="https://i.pinimg.com/736x/ba/96/ef/ba96ef9571b85992b1afae741949f335.jpg" alt="Pareja feliz" width="400">
+  </div>
+</body>
+</html>
